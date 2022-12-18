@@ -9,6 +9,7 @@
 #define AL_BZ 8
 
 
+
 void acendeLampadas (){
 
 wiringPiSetupGpio () ;
@@ -16,6 +17,7 @@ wiringPiSetupGpio () ;
   pinMode (L_02, OUTPUT) ;
   
  
+
   for (;;) {
 
     digitalWrite (L_01, HIGH) ; 
@@ -34,6 +36,7 @@ wiringPiSetupGpio () ;
   pinMode (L_01, OUTPUT) ;
   pinMode (L_02, OUTPUT) ;
   
+ 
 
   for (;;) {
     
@@ -47,11 +50,44 @@ wiringPiSetupGpio () ;
 
 }
 
+void ligaArCondicionado (){
+
+wiringPiSetupGpio () ;
+  pinMode (AC, OUTPUT) ;
+
+
+
+  for (;;) {
+
+    digitalWrite (AC, HIGH) ; 
+    delay (500) ;
+    
+  }
+
+}
+
+void desligaArCondicionado (){
+
+wiringPiSetupGpio () ;
+  pinMode (AC, OUTPUT) ;
+
+
+
+  for (;;) {
+    
+    digitalWrite (AC,  LOW) ; 
+    delay (500) ;
+  }
+
+}
+
+
 int main (void) {
 
 //acendeLampadas ();
 //apagaLampadas ();
-
+//ligaArCondicionado ();
+//desligaArCondicionado ();
 
     return 0 ;
 }

@@ -81,6 +81,36 @@ wiringPiSetupGpio () ;
 
 }
 
+void ligaProjetor(){
+
+wiringPiSetupGpio () ;
+  pinMode (PR, OUTPUT) ;
+
+ 
+
+  for (;;) {
+
+    digitalWrite (PR, HIGH) ; 
+    delay (500) ;
+    
+  }
+
+}
+
+void desligaProjetor (){
+
+wiringPiSetupGpio () ;
+  pinMode (PR, OUTPUT) ;
+
+ 
+
+  for (;;) {
+
+    digitalWrite (PR,  LOW) ; 
+    delay (500) ;
+  }
+
+}
 
 int main (void) {
 
@@ -88,6 +118,8 @@ int main (void) {
 //apagaLampadas ();
 //ligaArCondicionado ();
 //desligaArCondicionado ();
+//ligaProjetor ();
+//desligaProjetor
 
     return 0 ;
 }

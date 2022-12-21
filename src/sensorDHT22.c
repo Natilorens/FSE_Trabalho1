@@ -13,7 +13,7 @@ static const unsigned short signal = 4;
 unsigned short data[5] = {0, 0, 0, 0, 0};
 
 
-short readData()
+short readDhtData()
 {
 	unsigned short val = 0x00;
 	unsigned short signal_length = 0;
@@ -118,7 +118,7 @@ int main(void)
 		delay(20);					// Stay LOW for 5~30 milliseconds
 		pinMode(signal, INPUT);		// 'INPUT' equals 'HIGH' level. And signal read mode
 
-		readData();		// Read DHT22 signal
+		readDhtData();		// Read DHT22 signal
 
 		// The sum is maybe over 8 bit like this: '0001 0101 1010'.
 		// Remove the '9 bit' data using AND operator.

@@ -1,6 +1,5 @@
 #include <wiringPi.h>
 #include <stdio.h>
-#include <sensores.h>
 #include <unistd.h>
 
 
@@ -185,7 +184,7 @@ void desligaAlarme () {
 
 void desligaAparelhos (){
 
-    wiringPi();
+    wiringPiSetupGpio();
     pinMode (L_01, OUTPUT) ;
     pinMode (L_02, OUTPUT) ;
     pinMode (AC, OUTPUT) ;
@@ -360,7 +359,7 @@ int main (void) {
     break;
 
     case 9 :
-    ligaAlarme ();
+    acionaAlarme ();
     break;
 
     case 10 :

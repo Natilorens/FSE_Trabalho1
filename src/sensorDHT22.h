@@ -99,7 +99,7 @@ int main(void)
 {
 	float humidity;
 	float celsius;
-	//float fahrenheit;
+	float fahrenheit;
 	short checksum;
 
 	// GPIO Initialization
@@ -145,10 +145,10 @@ int main(void)
 				celsius *= -1;
 			}
 
-			//fahrenheit = ((celsius * 9) / 5) + 32;
+			fahrenheit = ((celsius * 9) / 5) + 32;
 
 			// Display all data
-			printf("TEMP: %6.2f *C (%6.2f *F) | HUMI: %6.2f %\n\n", celsius, humidity);
+			printf("TEMP: %6.2f *C (%6.2f *F) | HUMI: %6.2f %\n\n", celsius, fahrenheit, humidity);
 			return 0;
 		}
 
